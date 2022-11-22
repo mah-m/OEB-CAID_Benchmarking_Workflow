@@ -72,7 +72,7 @@ def write_participant_dataset( ID, community, challenges, participant_name, vali
     - metric_value - the numeric value of the metric
     - error - the standard error/deviation for the computed metric (can be 0)
 """
-def write_assessment_dataset( ID, community, challenge, participant_name, metric, metric_value, error):
+def write_assessment_dataset( ID, community, challenge, participant_name, metric, metric_value):
 
     data = {
         "_id": ID,
@@ -81,7 +81,7 @@ def write_assessment_dataset( ID, community, challenge, participant_name, metric
         "type": "assessment",
         "metrics": {"metric_id": metric,
                     "value": float(metric_value),
-                    "stderr": error
+                    # "stderr": error
                     },
         "participant_id": participant_name
 
