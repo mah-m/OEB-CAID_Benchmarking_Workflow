@@ -1,0 +1,25 @@
+{
+    "_id": "OEBE0010000000",
+    "challenge_ids": [
+        "disprot-disorder"
+    ],
+    "datalink": {
+        "inline_data": {
+            "challenge_participants": [
+                {
+                    "metric_x": 0.774,
+                    "participant_id": "ESpritz-D"
+                },
+                {
+                    "metric_x": 0.735,
+                    "participant_id": "IUPred2A-long"
+                }
+            ],
+            "visualization": {
+                "type": "bar-plot",
+                "x_axis": "aucroc"
+            }
+        }
+    },
+    "type": "aggregation"
+}
