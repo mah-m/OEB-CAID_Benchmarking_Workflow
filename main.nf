@@ -5,7 +5,7 @@ if (params.help) {
 	    log.info"""
 	    ==============================================
 		CAID BENCHMARKING PIPELINE 
-		This pipeline was developed based of the TCGA CANCER DRIVER GENES BENCHMARKING PIPELINE 
+		This pipeline was developed based on the TCGA CANCER DRIVER GENES BENCHMARKING PIPELINE 
 	    ==============================================
 	    Usage:
 	    Run the pipeline with default parameters:
@@ -13,10 +13,10 @@ if (params.help) {
 
 	    Run with user parameters:
 
- 	    nextflow run main.nf -profile docker --input {driver.genes.file} --public_ref_dir {validation.reference.file} --participant_id {tool.name} --goldstandard_dir {gold.standards.dir} --challenges {analyzed.cancer.types} --assess_dir {benchmark.data.dir} --augmented_assess_dir {benchmark.augmented_data.dir} --results_dir {output.dir}
+ 	    nextflow run main.nf -profile docker --input {input.file} --public_ref_dir {validation.reference.file} --participant_id {tool.name} --goldstandard_dir {gold.standards.dir} --challenges {gtound_truths} --assess_dir {benchmark.data.dir} --augmented_assess_dir {benchmark.augmented_data.dir} --results_dir {output.dir}
 
 	    Mandatory arguments:
-                --input                 List of cancer genes prediction
+                --input                 List of protein disorder predictions
                 --community_id          Name or OEB permanent ID for the benchmarking community
                 --public_ref_dir        Directory of the refrence files that has the input data is validated agains. For the CAID challenge, these file are the same as gold standards. 
                 --participant_id        Name of the tool used for prediction
@@ -48,7 +48,7 @@ if (params.help) {
          public reference directory : ${params.public_ref_dir}
          tool name : ${params.participant_id}
          metrics reference datasets: ${params.goldstandard_dir}
-         selected cancer types: ${params.challenges_ids}
+         selected challenges: ${params.challenges_ids}
          benchmark data: ${params.assess_dir}
          augmented benchmark data: ${params.augmented_assess_dir}
          validation results directory: ${params.validation_result}
